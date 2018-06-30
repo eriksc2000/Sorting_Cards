@@ -16,5 +16,9 @@ class CardTest < Minitest::Test
     assert_equal 'Ace', card.value 
   end 
 
-
+  def test_it_verifies_card_suit 
+    card = Card.new("Ace", "Spades")
+   
+    assert_equal 'Spades', card.suit 
+  end 
 end
