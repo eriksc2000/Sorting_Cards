@@ -5,4 +5,8 @@ class Card
     @suite = suit 
   end 
   
+  def value
+    @value
+  end 
+  
 end 

@@ -9,5 +9,12 @@ class CardTest < Minitest::Test
     
     assert_instance_of Card, card 
   end
+  
+  def test_it_verifies_card_value
+    card = Card.new("Ace", "Spades")
+    
+    assert_equal 'Ace', card.value 
+  end 
+
 
 end
