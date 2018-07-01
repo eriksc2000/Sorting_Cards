@@ -6,4 +6,7 @@ class Round
     @guesses = []
   end 
   
+  def current_card
+    deck.cards[0]
+  end 
 end
