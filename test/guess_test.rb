@@ -32,5 +32,19 @@ class GuessTest < Minitest::Test
     
     assert_equal "Correct!", guess.feedback 
   end 
+  
+  def test_it_has_incorrect_guess
+    card = Card.new('10', 'Hearts')
+    guess = Guess.new('2 of Diamonds', card)
+    
+    assert_equal false, guess.incorrect?
+  end
+  
+  def test_it_has_incorrect_feedback
+    card = Card.new('10', 'Hearts')
+    guess = Guess.new('2 of Diamonds', card)
+    
+    assert_equal "Incorrect.", guess.feedback_incorrect 
+  end 
     
 end
