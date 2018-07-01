@@ -1,10 +1,12 @@
 require './lib/card'
 
 class Guess 
+  attr_reader :response, :card 
 
   def initialize(response, card) 
-    @card = card 
-    @response = response 
+     @response = response
+     @card = card  
   end  
+  
   
 end
