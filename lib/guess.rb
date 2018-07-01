@@ -9,7 +9,7 @@ class Guess
   end  
   
   def correct?
-    if @response = "#{card.value} of #{card.suit}"
+    if @response == "#{card.value} of #{card.suit}"
       true 
     else
       false 
@@ -17,26 +17,10 @@ class Guess
   end 
   
   def feedback 
-    if @response = "#{card.value} of #{card.suit}"
+    if @response == "#{card.value} of #{card.suit}"
       "Correct!"
     else
       "Incorrect."
-    end 
-  end
-  
-  def incorrect?
-    if @response != "#{card.value} of #{card.suit}"
-      false
-    else
-      true 
-    end
-  end
-  
-  def feedback_incorrect
-    if @response != "#{card.value} of #{card.suit}"
-      "Incorrect."
-    else 
-      "Correct!"
     end 
   end 
   
