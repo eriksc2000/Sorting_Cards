@@ -8,5 +8,12 @@ class Guess
      @card = card  
   end  
   
+  def correct?
+    if @response = "#{card.value} of #{card.suit}"
+      true 
+    else
+      false 
+    end 
+  end 
   
 end
