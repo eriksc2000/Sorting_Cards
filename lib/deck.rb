@@ -1,5 +1,5 @@
-require './lib/card'
-require './lib/guess'
+require './card'
+require './guess'
 
 class Deck
   attr_reader :cards 
