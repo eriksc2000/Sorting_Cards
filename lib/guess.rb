@@ -16,4 +16,12 @@ class Guess
     end 
   end 
   
+  def feedback 
+    if @response = "#{card.value} of #{card.suit}"
+      "Correct!"
+    else
+      "Incorrect."
+    end 
+  end
+  
 end
