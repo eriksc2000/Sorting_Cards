@@ -1,3 +1,7 @@
+require './card'
+require './guess'
+require './deck'
+
 class Round 
   attr_reader :deck, :guesses 
   
