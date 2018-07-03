@@ -1,6 +1,7 @@
 require './lib/card'
 require './lib/guess'
 require './lib/deck'
+require 'pry'
 
 class Round 
   attr_reader :deck, :guesses, :correct_guess 
@@ -18,12 +19,11 @@ class Round
   def record_guess(response)
     response = "#{response [:value]} of #{[:suit]}"
     guess = Guess.new(response, current_card)
-    @guesses << guess 
-    if guess.feedback == "Correct"
+    @guesses << guess
+    if guess == "Correct"
       @correct_guess += 1
     end 
-    deck.cards.shift
-    guess 
-  end 
-  
+     guess 
+  end
+
 end
