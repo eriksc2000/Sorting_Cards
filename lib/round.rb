@@ -20,7 +20,7 @@ class Round
     response = "#{response [:value]} of #{[:suit]}"
     guess = Guess.new(response, current_card)
     @guesses << guess
-    if guess == "Correct"
+    if guess == "Correct!"
       @correct_guess += 1
     end 
      guess 
